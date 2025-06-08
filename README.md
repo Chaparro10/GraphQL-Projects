@@ -1,6 +1,6 @@
 
-#Informacion general de GraphQL
-#¿Qué es GraphQL?
+# Informacion general de GraphQL
+# ¿Qué es GraphQL?
 GraphQL es un lenguaje de consulta para APIs desarrollado por Facebook. A diferencia de REST, donde haces múltiples endpoints para obtener datos, con GraphQL puedes obtener toda la información que necesitas en una sola petición.
 
 🧠 Ventajas principales:
@@ -12,11 +12,11 @@ GraphQL es un lenguaje de consulta para APIs desarrollado por Facebook. A difere
 
 📊 Ideal para aplicaciones con múltiples frontends (web, móvil, etc).
 
-#Funcionalidad
- #typeDefs (Type Definitions)
+# Funcionalidad
+ # typeDefs (Type Definitions)
 Aquí defines el esquema de tu API. Especificas los tipos de datos, las queries disponibles, las mutaciones, y cualquier tipo personalizado.
 
-#Ejemplo
+# Ejemplo
 type User {
   _id: ID!
   name: String!
@@ -39,9 +39,9 @@ type Mutation {
   deleteUser(id: ID!): String
 }
 
-#Resolvers
+# Resolvers
 Los resolvers son las funciones que ejecutan la lógica de las consultas (Query) y mutaciones (Mutation). Cada campo en tu schema debe tener un resolver que le diga cómo obtener o modificar los datos.
-#Ejemplo
+# Ejemplo
 import UserModel from '../models/user.model.js';
 
 export default {
@@ -62,7 +62,7 @@ export default {
 };
 
 
-#Ciclo de Ejecucion
+# Ciclo de Ejecucion
 El cliente hace una consulta o mutación (ej: createUser).
 
 GraphQL valida la estructura con los typeDefs.
@@ -73,7 +73,7 @@ El resolver interactúa con MongoDB (vía Mongoose).
 
 La respuesta se envía de vuelta al cliente.
 
-#⚙️ ¿Qué es Apollo Server?
+# ⚙️ ¿Qué es Apollo Server?
 Apollo Server es una biblioteca para crear un servidor GraphQL en Node.js. Se integra fácilmente con Express, y te permite crear APIs eficientes, seguras y escalables.
 
 🚀 Características de Apollo Server:
@@ -86,7 +86,7 @@ Documentación automática con Apollo Sandbox.
 Compatible con herramientas como Apollo Client en el frontend.
 
 
-#Informacion sobre el proyecto
+# Informacion sobre el proyecto
 # GraphQL API con Apollo Server y Express
 
 Este proyecto implementa una API GraphQL utilizando:
@@ -98,7 +98,7 @@ Este proyecto implementa una API GraphQL utilizando:
 - Estructura modular (Schemas, Resolvers)
 
 
-#URL del Playground
+# URL del Playground
 -http://localhost:3000/graphql
 
 # Arquitectura del Proyecto
