@@ -2,8 +2,8 @@
 
 
 
-import User from "./models/User.js";
-export const resolvers = {
+import User from "../models/User.js";
+ const Userresolvers = {
     Query: {
         hello: (root, args, ctx) => {//recibe 3 parametros root=paso anterior, args=parametros , ctx= contexto
             console.log('ctx', ctx)
@@ -26,3 +26,6 @@ export const resolvers = {
         }
     }
 }
+
+
+export default Userresolvers;

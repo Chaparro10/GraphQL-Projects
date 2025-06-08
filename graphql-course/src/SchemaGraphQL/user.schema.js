@@ -1,12 +1,6 @@
+import { gql } from "graphql-tag";
 
-import { makeExecutableSchema } from "graphql-tools";
-import { resolvers } from "./resolvers.js";
-
-
-
-
-
-const typeDefs = `
+const userTypeDefs  = gql`
 type Query {
 hello: String!
 users:[User]
@@ -34,8 +28,5 @@ rol:String
 }
 `
 
+export default userTypeDefs;
 
-export default makeExecutableSchema({
-    typeDefs,
-    resolvers
-})
